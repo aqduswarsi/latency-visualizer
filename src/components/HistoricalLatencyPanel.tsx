@@ -61,7 +61,7 @@ export default function HistoricalLatencyPanel() {
         </div>
       </div>
 
-      <HistoricalLatencyChart source={source} target={target} range={range} />
+      <HistoricalLatencyChart from={source} to={target} range={range} />
     </div>
   );
 }
