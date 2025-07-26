@@ -23,6 +23,8 @@ const getLatencyColor = (latency: number) => {
 function Earth() {
   const earthRef = useRef<THREE.Mesh>(null);
   const colorMap = useLoader(TextureLoader, "/textures/earthColorMap.jpg");
+  const bumpMap = useLoader(TextureLoader, "/textures/earthBumpMap.jpg");
+  const specularMap = useLoader(TextureLoader, "/textures/earthSpecularMap.jpg");
 
   useFrame(() => {
     if (earthRef.current) {
