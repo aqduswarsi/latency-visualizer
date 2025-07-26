@@ -1,7 +1,7 @@
 // src/components/Pin.tsx
 "use client";
 
-import { Text, Sphere } from "@react-three/drei";
+import { Text, Sphere, Billboard } from "@react-three/drei";
 import { Vector3 } from "three";
 
 interface PinProps {
@@ -17,16 +17,16 @@ export default function Pin({ position, label }: PinProps) {
       </Sphere>
 
       {label && (
-        <Text
-          position={[position.x, position.y + 0.03, position.z]}
-          fontSize={0.025}
-          color="white"
-          anchorX="center"
-          anchorY="bottom"
-          billboard // ✅ makes text always face the camera
-        >
-          {label}
-        </Text>
+        <Billboard position={[position.x, position.y + 0.03, position.z]}>
+          <Text
+            fontSize={0.025}
+            color="white"
+            anchorX="center"
+            anchorY="bottom"
+          >
+            {label}
+          </Text>
+        </Billboard>
       )}
     </>
   );
