@@ -15,9 +15,9 @@ import { exchanges } from "../data/exchangeData";
 
 // 🟢 Latency-based color logic
 const getLatencyColor = (latency: number) => {
-  if (latency < 80) return "#00ff00";     // Green
-  if (latency < 140) return "#ffff00";    // Yellow
-  return "#ff0000";                       // Red
+  if (latency < 80) return "#00ff00"; // Green
+  if (latency < 140) return "#ffff00"; // Yellow
+  return "#ff0000"; // Red
 };
 
 function Earth() {
